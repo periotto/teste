@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <meta name="author" content="Brasystem" />    
+        <link href="images/favicon.ico" rel="shortcut icon">
+
+        <link rel="stylesheet" type="text/css" href="web/css/style.css" media="screen and (min-width:1025px)" />  
+        <link rel="stylesheet" type="text/css" href="web/css/style-tablet.css" media="screen and (min-width:600px) 
+              and (max-width:1024px)">
+        <link rel="stylesheet" type="text/css" href="web/css/style-smart.css" media="screen and (max-width:599px)">  
+        <!--[if lt IE 9]>
+                <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        <title>Weblojas</title>
+        <script src="web/js/jquery.js"></script>
+        <script src="web/js/usuario.js"></script>
+    </head>
+    <body class="login" >
+        <header>
+            <div id="logo">
+                <a title="In&iacute;cio"></a>                
+            </div>        
+        </header>
+        <section id="geral">  
+            <div class="login-box">
+                <h2>Bem vindo ao Weblojas!</h2>
+                <ul id="login-desktop">
+                    <li class="login-security">Diferentes permissões e acesso através de login e senha tornam o 
+                        ambiente <b>seguro</b> para navegar e cadastrar seus dados;</li>
+                    <li class="login-control">O Weblojas tem integração direta com o sistema Winlojas, permitindo
+                        o <b>controle</b> sobre todos os dados cadastrados nas lojas e franquias;</li>
+                    <li class="login-anywhere">Os dados podem ser acessados <b>de qualquer lugar</b>, tornando a
+                        comunicação entre funcionários mais dinâmica e facilitando o seu trabalho.</li>
+                </ul>
+                <ul id="login-tablet">
+                    <li class="login-security">
+                        Permissões e acesso por login e senha: <b>segurança no acesso</b>;
+                    </li>
+                    <li class="login-control">
+                        Integração com o Winlojas e <b>controle</b> sobre lojas e franquias;
+                    </li>
+                    <li class="login-anywhere">
+                        O acesso aos dados pode ser feito <b>de qualquer lugar</b>.
+                    </li>
+                </ul>
+                <div id="login-smart">
+                    <div class="login-security">
+                        <b>Segurança</b>
+                    </div>
+                    <div class="login-control">
+                        <b>Controle</b>
+                    </div>
+                    <div class="login-anywhere">
+                        <b>Efici&ecirc;ncia</b>
+                    </div>
+                </div>
+                <p>Rápido. Seguro. Eficiente.</p>
+            </div>         
+            <div class="direito">             
+                <p>Acesse sua conta:</p>               
+                <div id="login-form" class="form">
+                    <form id="login" method="post" action="javascript:login();">
+                        <p>Todos os campos devem ser preenchidos</p>
+                        <div>
+                            <input type="text" id="user" name="user" class="text required" autofocus 
+                                   placeholder="Usuário (login)"/>
+                            <input type="password" id="pass" name="pass" class="text required" placeholder="Senha"/>
+                            <input type="submit" class="button submit" value="Entrar" />
+                        </div>
+                    </form>
+                </div>
+            </div>  	
+        </section>
+        <footer onclick="http://www.brasystem.com.br/">
+            <p><a href="http://www.brasystem.com.br/brasystem/index.php" 
+               title="Brasystem: sistemas para automação comercial" target="_blank"></a></p>
+        </footer>
+    </body>
+</html>

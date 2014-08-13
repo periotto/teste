@@ -1,0 +1,858 @@
+@media (orientation: portrait){
+    .login .login-box #login-smart div {
+        padding: 3.5em 0 1em 0;
+    }
+    #login-smart{
+        margin-bottom: 4%;
+    }
+}
+@media (orientation: landscape){
+    .login .login-box #login-smart div {
+        padding: 5em 0 1em 0;
+    }
+    #login-smart{
+        margin-bottom: 6%;
+    }
+} 
+/*--------------------------- HEADER -----------------------------------------*/
+header h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0.5% 0 0;
+}
+#user-name > ul > li span {
+    width: 110px;
+}
+#user-name > ul {
+    width: 260px;
+    right: -1.5em;
+}
+#user-name > ul > li span {
+    width: 100px;
+}
+#user-name > ul {
+    right: -0.5em;
+    width: 230px;
+}
+/*--------------------------- MENU -------------------------------------------*/
+#grid{
+    float: left;
+    height: 70%;
+    margin: 0;
+    padding:1% 3% 2%;
+    width: 45px;
+}
+.line{
+    display: block;
+    height: 10px;
+    background: #fff;
+    border-radius: 2px;
+    margin: 2px 0 0 0;
+}
+/*--------------------------- GERAL ------------------------------------------*/
+* {
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+body,html {
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: #0574aa;
+    text-decoration: none;
+}
+input[type="date"],
+#janela,
+#link-logoff,
+#main-menu-mobile,
+#login-desktop,
+#login-tablet,
+#fundo,
+header #user,
+.login .login-box h2,
+.login .login-box p{
+    display: none;
+}
+h2,h3,h6{
+    text-align: center;
+}
+/*--------------------------- LOGIN ------------------------------------------*/
+.login .login-box .login-security {
+    background-image: url('img/lock.png');
+    float: left;
+    width: 33%;
+}
+.login .login-box .login-control {
+    float: left;
+    width: 37%;
+    background-image: url('img/admin.png');
+}
+.login .login-box .login-anywhere {
+    width: 30%;
+    float: left;
+    background-image: url('img/anywhere.png');
+}
+.login footer a{
+    width: 55%;
+}
+.login footer{
+    margin: 1em 0 0 0;
+}
+.login .login-box #login-smart div {
+    height: 0;
+    font-size: 1em;
+    text-align: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+#login-smart{
+    height: 90px;
+    margin-top: 4%;
+    width: 95%;
+}
+.login .submit {
+    font-size: 1.2em;
+    margin: 5% 0 0 37%;
+}
+.login #geral{
+    height: 70%;
+    font-size: 1.2em;
+}
+.login #geral .direito {
+    height: 230px;
+    width: 94%;
+    padding: 5% 1% 0% 1%;
+    background-color: #FFFFFF;
+    right: 2%;
+    top: 20%;
+    -moz-box-shadow: 0 5px 4px #999999;
+    -webkit-box-shadow: 0 5px 4px #999999; 
+    box-shadow: 0 5px 4px #999999;
+}
+.login{
+    background: #d3d3d3;
+}
+.login input.text{
+    margin: 2% 5% 2% 8%;
+    text-align: center;
+    width: 80%;
+}
+#login-form{
+    margin: 0;
+}
+
+.login .form form > p {
+    margin:0 0 5px 0;
+}
+.login #logo a{
+    background-image: url("img/logo-nome.png");
+    background-position: center 0em;
+    background-repeat: no-repeat;
+    background-size: 12em;
+    float: left;
+    height: 45px;
+    width: 100%;
+}
+/*---------------------- HEADER ----------------------------------------------*/
+header {
+    background-color: #000000;
+    width: 97.4%;
+    margin-bottom: 1%;
+    padding: 0.4% 1.3% 0.3% 1.3%;
+    z-index: 9990;
+    top: 0px;
+    color:#fff;
+    left:  0px;
+    height: 45px;
+    moz-box-shadow: 0px 2px 3px #333;
+    -webkit-box-shadow: 0px 2px 3px #333;
+    box-shadow: 0px 2px 3px #333;
+}
+header a {
+    color: #fff;
+}
+/*user*/
+#logoff,#user-name{
+    font-size: 1.3em;
+    position: absolute;
+    top: 1.5em;
+    padding: 0.2em 0 0.2em 1.2em;
+}
+#user-name{
+    right: 6.8em;
+    max-height: 25px;
+}
+#user-name > ul {
+    position: relative;
+    font-size: 0.8em;
+    top:  2.5em;
+    padding: 2em 1em 1em 1em;
+    text-align: right;
+    z-index: 9;
+    background-color: #000000;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    height: 7.5em;
+    display: none;
+}
+#user-name:hover ul {
+    display: block;
+}
+#user-name > ul > li span {
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    background-position: -10px -19px;
+    display: block;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+    float: right;
+}
+#user-name  ul  li  ul{
+    clear: both;
+}
+#user-name > a {
+    float: right;
+    text-align: center;
+    max-width: 175px;
+    padding-right: 30px;
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    background-position: 4.6em -34px;
+    padding-right: 20px;
+}
+/*logoff*/
+#logoff {
+    right: 1.3em;
+    border-left: 1px solid #444444;
+}
+#logoff > a {
+    float: right;
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+}    
+/*--------------------------- GERAL ------------------------------------------*/
+#geral {
+    top: 55px;
+    width: 100%;
+    height:  89%;
+    z-index: 5;
+    *z-index: 5;
+}
+.esquerdo{
+    height: 93%;
+    bottom: 0px;
+    position: absolute;
+    z-index: 20;
+    overflow: scroll;
+    width: 70%;
+    border-right: 1px solid #c3c3c3;
+    left: 0px;
+    -moz-box-shadow: 3px 3px 3px #000;
+    -webkit-box-shadow: 3px 3px 3px #000;
+    box-shadow: 3px 3px 3px #000;
+    background: -webkit-radial-gradient(circle,#BBE7FF,#76A0BB); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle,#BBE7FF,#76A0BB); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle,#BBE7FF,#76A0BB); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle,#BBE7FF,#76A0BB); /* Standard syntax */
+
+    -webkit-transform: translateX(-101%);
+    -moz-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    transform: translateX(-101%);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+.menu-active .esquerdo{
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+}
+/*--------------------------- FOOTER -----------------------------------------*/
+footer {
+    height: 3em;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+}
+footer a,#footer {
+    background-image: url("img/brasystem.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    height: 75px;
+    width: 150px;
+}
+/*--------------------------- MENU -------------------------------------------*/
+nav{
+    background-color: #fff;
+    height: 240px;
+    margin: 0 0 5%;
+}
+.nav li a{
+    color: #000;
+}
+.nav li a#menu{
+    padding: 0 35px 0 0px;
+    font-size: 1.2em;
+}
+.nav{
+    padding: 10px 0% 0% 35%;
+    font-size: 16px;
+    height: 30px;
+    position: relative;
+}
+.submenu{
+    z-index: 50;
+    left: -18%;
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid #000;
+}
+.submenu li a{
+    padding: 10px 0 0 60px;
+    height: 30px;
+    border-bottom: 1px solid #999;
+    background-color: #fff;
+    display: block;
+    font-weight: bold;
+} 
+.submenu li#roxo a:link,
+.submenu li#roxo a:visited{  
+    background-image: url('img/vendas.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+    color: #982da8;
+}
+.submenu li#verde a:link,
+.submenu #verde a:visited{    
+    color: #3f9e09;
+    background-image: url('img/produtos.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#rosa a:link,
+.submenu #rosa a:visited{   
+    color: #bf0a80;
+    background-image: url('img/franquias.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#azul a:link,
+.submenu #azul a:visited{
+    color: #0574aa;
+    background-image: url('img/lojas.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#laranja a:link,
+.submenu #laranja a:visited{
+    color: #d45d00;
+    background-image: url('img/usuarios.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+/*----------------------------------------------------------------------------*/
+#opcoes{
+    min-width: 7em;
+}
+/*--------------------------- TABELAS ----------------------------------------*/
+table.pesq {
+    border: 1px solid #acacac;
+    border-collapse: collapse;
+    color: #244B69;
+    width: 98%;
+    margin-top: 1em;
+}
+.table td {
+    border-top: 1px solid #ddd;
+}
+.table tr:nth-child(odd) td {
+    background-color: #f1f6f9;
+}
+.table tr td:first-child,.table tr th:first-child{
+    display: none;
+}
+.table tr{
+    background-color: #ffffff;
+}
+.table td, table th {
+    text-align: left;
+    padding: 0.4em;
+}
+.table-footer {
+    margin-top: 0.5em;
+    position: relative;
+    text-align: center;
+    width: 98%;
+}
+.table-footer > div {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.table-footer .table-total {
+    color: #555555;
+    font-size: 0.7em;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+}
+.table-footer .table-pagination {
+    color: #555555;
+}
+.table-footer .table-pagination ul li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+.table-footer .table-pagination ul li a {
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 0.5em;
+}
+.table-footer .table-pagination ul li#page-first a {
+    background-position: 6px -124px;
+    height: 15px;
+    width: 20px;
+}
+.table-footer .table-pagination ul li#page-first.disabled a {
+    background-position: 6px -216px;
+}
+.table-footer .table-pagination ul li#page-previous a {
+    background-position: 6px -170px;
+    height: 15px;
+    width: 40px;
+}
+.table-footer .table-pagination ul li#page-previous.disabled a {
+    background-position: 6px -262px;
+}
+.table-footer .table-pagination ul li#page-next a {
+    background-position: 6px -194px;
+    height: 15px;
+    width: 20px;
+    margin-left: 0.5em;
+}
+.table-footer .table-pagination ul li#page-next.disabled a {
+    background-position: 6px -286px;
+}
+.table-footer .table-pagination ul li#page-last a {
+    background-position: 6px -146px;
+    height: 15px;
+    width: 20px;
+}
+.table-footer .table-pagination ul li#page-last.disabled a {
+    background-position: 6px -238px;
+}
+.table-footer .table-page {
+    color: #555555;
+    font-size: 0.9em;
+    position: absolute;
+    right: 0;
+}
+/*--------------------------- FORMS ------------------------------------------*/
+.form {
+    margin: 1em 0;
+}
+#new-user p,#new-franchising p,#new-store p,#new-product p,form p {
+    font-size: 0.7em;
+    color: #777777;
+    text-align: center;
+}
+form.filtro{
+    margin: 0 0 10px 0;
+    text-align: center;
+    padding: 0 0.5em;
+    height: 220px;
+    border-bottom: 1px solid #c3c3c3;
+}
+form.filtro .submit,.sub-filtro .submit{
+    width: 101%;
+    font-size: 1.2em;
+    margin: 5px 0 0 0;
+}
+form.filtro h5{
+    margin-bottom: 5px;
+}
+form.filtro h4{
+    padding: 5px 0;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+.form form > h3 {
+    font-size: 1em;
+    color: #333333;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #cccccc;
+    font-weight: normal;
+    text-align: center;
+}
+.form form table,.sub-filtro table {
+    margin-top: 0em;
+}
+form.filtro select {
+    margin: 8px 0 8px 1%;
+}
+.form form input.checkbox,
+.form form input.radio {
+    margin-right: 0.5em;
+}
+.form table td,.sub-filtro table td {
+    border-top: none;
+}
+.form table tr:nth-child(even) td,
+.form table tr:nth-child(odd) td,
+.sub-filtro table tr:nth-child(even) td,
+.sub-filtro table tr:nth-child(odd) td{
+    background-color: #ffffff;
+}
+.sub-filtro table{
+    border: none;
+    margin: 0 0 0 -33%;
+}  
+#esquerdo{
+    margin: 0 3% 3%;
+    width: 95%;
+}
+#direito{
+    margin: 0 3%;
+    width: 95%;
+}
+/*---------------------- BOTOES, SELECT, INPUTS ------------------------------*/
+
+.button {
+    background-color: #cccccc;
+    color: #555555;
+    font-size: 1em;
+    padding: 0.3em 0.5em 0.3em;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submit {
+    background-color: #3f9e09;
+    color: #FFFFFF;
+}
+select{
+    width: 15em;
+    height: 28px;
+    padding: 0.2em 0.2em 0.2em 1em;
+    border: 1px solid #bbbbbb;
+}
+input.text {
+    width: 13.87em;
+    padding: 0.2em 0.5em;
+    margin: 5px;
+    border: 1px solid #bbbbbb;
+    height: 30px;
+}
+.new{
+    background: none repeat scroll 0 0 #0574aa;
+    color: #ffffff;
+    font-size: 1.3em;
+    margin: 5% 1.3%;
+    width: 98%;
+}
+/*----------------------------------------------------------------------------*/
+/*ESTILOS PARA PAGINAS ESPECIFICAS*/
+/*VENDAS*/
+.vendas #produto{
+    display: none;
+}
+.detail-store {
+    width: 17em;
+    color: #333333;
+    background-color: #ffffff;
+    padding: 0.5em 0 0 0.5em;
+}
+.detail-store h3, .detail-store h4 {
+    font-size: 1.2em;
+}
+.detail-store h4 {
+    font-weight: normal;
+    text-align: center;
+}
+.detail-store h3 {
+    color: #0574AA;
+    text-align: center;
+}
+.detail-store p {
+    font-size: 1em;
+}
+.detail-store p.total-store {
+    margin-top: 0.5em;
+    border-bottom: 1px solid #ccc; 
+}
+.detail-store > a {
+    background-color: #0574AA;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    padding: 0.1em 0;
+    margin: 0.8em 0 0 -0.5em
+}
+.link_class {
+    cursor: pointer; /*IE*/
+    cursor: hand; /*FF e demais*/
+}
+#mapa{
+    height: 90%;
+    position: absolute;
+    right: 0;
+    top: 3em;
+    width: 99.8%;
+    z-index: 0;
+}
+.vendas .sub-filtro table{
+    text-align: center;
+}
+.vendas table.pesq{
+    margin-top: 0;
+}
+.vendas input.text{
+    height: 20px;
+    margin: 0;
+    width: 11em;
+}
+.vendas nav{
+    margin: 0 0 125%;
+}
+.vendas select{
+    width: 12em;
+}
+.vendas .sub-filtro .submit{
+    margin: 3%;
+    width: 87%;
+}
+.vendas #footer{
+    bottom: 1.5em;
+}
+#cssmenu{
+    margin: 0 0 5% 0;
+}
+#grafico{
+    overflow: hidden;
+    margin: 0 0 0 -7em;
+}
+#mens{
+    height: 30px;
+    border-radius: 2px;
+    width: 240px;
+    top: 13em;
+    right: 3em;
+    float: right;
+    position: relative;
+    text-align: center;
+    padding-top: 4em;
+    background: url('img/logo-nome.png');
+    background-size: 13em;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+/*SIDEBAR*/
+.sidebar{
+    padding: 10px;
+}
+.sidebar > a {
+    position: relative;
+}
+.sidebar > ul li#total {
+    background: 0 3px;
+    padding: 0px;
+    font-size: 15px;
+}
+.sidebar > a img {
+    border: 0;
+}
+.sidebar > a  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #0574AA;
+    color: #FFFFFF;
+    padding: 0.2em 0;
+    text-align: center;
+    width: 135px;
+}
+.sidebar > ul {
+    margin-bottom: 1em;
+}
+.sidebar > ul li {
+    color: #555555;
+    margin-bottom: 0.7em;
+    font-size: 0.9em;
+    padding-left: 40px;
+    background-image: url('img/icons-pay.png');
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #dddddd;
+}
+/*TIPOS PGTO*/
+#tipoPGTO{
+    max-width: 18%;
+    height: 98%;
+    margin: 0 0 0 -40px;
+    padding: 10px 0 0 5px;
+    float: left;
+    position: fixed;
+    z-index: 20;
+}
+#tipoPGTO ul li{
+    background-image: url('img/icons-pay.png');
+    background-repeat: no-repeat;
+    padding: 1px 0 0 40px;
+}
+#tipoPGTO ul li#total {
+    background: none;
+    padding: 0px;
+}
+/*SAIDEBAR E FINANCEIRO*/
+ul li #valor{
+    background: 0 3px;
+    padding: 0px;
+    font-size: 15px;
+}
+ul li#pay-cash {
+    background-position: 0 5px;
+}
+ul li#pay-billet {
+    background-position: 0 -34px;
+}
+ul li#pay-check {
+    background-position: 0 -75px;
+}
+ul li#pay-card {
+    background-position: 0 -115px;
+}
+ul li#pay-datecheck {
+    background-position: 0 -157px;
+}
+ul li#pay-change {
+    background-position: 0 -200px;
+}
+ul li#pay-checkconsult {
+    background-position: 0 -245px;
+}
+ul li#pay-order {
+    background-position: 0 -290px;
+}
+ul li#pay-gift {
+    background-position: 0 -334px;
+}
+ul li#pay-employee {
+    background-position: 0 -376px;
+}
+ul li#pay-ted {
+    background-position: 0 -422px;
+}
+ul li#pay-changegift {
+    background-position: 0 -290px;
+}
+#janelaVendas{
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 1%;
+    width: 80%;
+    z-index: 20;
+}
+#tVendas{
+    width: 78%;
+    float: right;
+    z-index: 50;
+    position: relative;
+}
+#tVendas table,#tItens table, sub-filtro table{
+    margin-top: 0em;
+}
+#produto table thead,
+#financeiro table thead,
+#loja1 table thead,
+#tItens table thead,
+#tVendas table thead{
+    color: #244B69;
+    margin: 0 auto;
+    font-weight: bold;
+    width: auto;
+}
+/*----------------------------------------------------------------------------*/
+/*PRODUTOS*/
+#comboFranquia select{
+    float: left;
+    margin: 0 20px 0 0;
+}
+.cad .filtro{
+    margin: 0 0 20px 0;
+}
+.cad{
+    padding: 2% 4% 0 4%;
+}
+.produtos .filtro table{
+    text-align: left;
+    width: 90%;
+}
+/*INDEX*/
+.index #geral{
+    top: 20%;
+    width: 60%;
+    height: 60%;
+}
+#nav > ul > li{ /* will style only the top level li */
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+    display: inline-block;
+    margin: 1px;
+    border-radius: 3px;
+    position:relative;
+    background: url('img/icons-menu.png');
+    background-size: 700px;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#fff;
+}
+#nav li.rosa{
+    background-color:#bf0a80;
+    background-position: -270px 20px;
+}
+#nav li.azul{		
+    background-position: -405px 25px;
+    background-color: #0574aa;
+    background-size: 685px;
+}
+#nav li.laranja{	
+    background-position: -557px 20px;
+    background-color:#d45d00;
+}
+#nav li.roxo{	
+    background-position: 20px 20px;
+    background-color:#982da8;
+}
+#nav li.verde{
+    background-position: -127px 20px;
+    background-color:#3f9e09;
+}
+
+#nav > ul > li > a{
+    color:inherit;
+    text-decoration:none !important;
+    font-size:24px;
+    padding: 0 27px 123px 28px;
+}
+.centro{
+    margin: 0 0 0 5%;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <meta name="author" content="Brasystem" />    
+        <link href="images/favicon.ico" rel="shortcut icon">
+
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="jquery/jquery.js"></script>
+
+        <script src="js/brasystemlib.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+        <script src="js/gmap3.js"></script>
+        <script src="js/vendas.js"></script>
+        <script src="js/jquery.window.js"></script>
+
+        <link rel="stylesheet" href="jquery/jquery-ui.css">
+        <link rel="stylesheet" href="css/jquery.window.css"/>
+
+        <link rel="stylesheet" href="css/style.css" media="screen and (min-width:1025px)" />  
+        <link rel="stylesheet" href="css/style-tablet.css" media="screen and (min-width:600px) 
+              and (max-width:1024px)">
+        <link rel="stylesheet" href="css/style-smart.css" media="screen and (max-width:599px)">
+        <script>
+            $(function() {
+                $("#cssmenu ul").accordion({
+                    heightStyle: "content",                
+                    collapsible: true,
+                });
+            });
+            $('.menu-anchor').on('click touchstart', function(e) {
+                $('html').toggleClass('menu-active');
+                e.preventDefault();
+            });
+            $(".direito").on('click touchstart', function(e) {
+                $('html').removeClass('menu-active');
+            });
+            google.load('visualization', '1.0', {'packages': ['corechart']});
+        </script>
+        <title>Vendas | Weblojas</title>
+    </head>
+    <body class="vendas">
+        <div id="mens">
+            Carregando...                
+        </div>
+        <header>
+            <a href="#" id="grid" class="menu-anchor">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <div id="logo">
+                <a></a>                
+            </div>
+            <h2>Vendas</h2>
+            <div id="user">
+                <div id="user-name">
+                    <a href="#">Ol&aacute;, %USERNAME%</a>
+                    <ul>
+                        <li><i>%USERTIPO%</i></li>
+                        <li>Último login: %USERlLOGIN%</li>
+                        <li>
+                            <span>Permissões</span>
+                            <ul>
+                                %USERPERMISSION%
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="logoff">
+                    <a href="controls/shared/get_end.php" title="sair">Sair</a>
+                </div> 
+            </div>      
+        </header>
+        <section id="geral">
+            <div id="vendas">
+                <div id="tVendas" style=""></div>
+                <div id="tipoPGTO" style=""></div>
+            </div>
+            <div id="itens" style="display: none;">
+                <div id="tItens"></div>
+            </div>
+            <div class="esquerdo">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#" id="menu">Menu</a>
+                            <ul class="submenu"> 
+                                <li id="roxo">
+                                    <a href="#" onclick="hideShow();">Vendas</a>
+                                </li>
+                                <li id="verde">
+                                    <a href="request.php?IDPAGINA=combos">Produtos</a>
+                                </li>
+                                <li id="rosa">
+                                    <a href="request.php?IDPAGINA=franquias&page=1">Franquias</a>
+                                </li>
+                                <li id="azul">
+                                    <a href="request.php?IDPAGINA=lojas&page=1">Lojas</a>
+                                </li>
+                                <li id="laranja">
+                                    <a href="request.php?IDPAGINA=usuarios&page=1">Usu&aacute;rios</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href='#'><span>Filtros</span></a>
+                            <ul class="filtro" id="form">
+                                <li>
+                                    <a href="#" id="janela">Clique para filtrar</a>
+                                    <form method="post" class="sub-filtro" style="max-width:315px;">
+                                    <div id="esquerdo">
+                                        <label>Franquias</label>
+                                        %COMBOFRAN%
+                                        <label>De</label>
+                                        <input type="text" id="dataINI" class="dataINI text"/>
+                                        <input type="date" class="dataINI text"/>
+                                    </div>
+                                    <div id="direito">
+                                        <label>Lojas</label>                                                    
+                                        <select id="loja" class="required">
+                                            <option value="0">Todas as lojas</option>
+                                        </select>
+                                        <label>At&eacute;</label>
+                                        <input type="text" id="dataFIN" class="dataFIN text"/>
+                                        <input type="date" class="dataFIN text"/>
+                                    </div>
+                                        <input type="button" id="pesq" class="button submit" onclick="getLojas();" value="Pesquisar">
+                                    </form>                        
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href='#'><span>Lojas</span></a>
+                            <div id="tLojas"></div>
+                        </li>
+                        <li><a href='#' id="produto"><span>Produtos</span></a>
+                            <div id="grafico"></div>
+                        </li>
+                        <li><a href='#'><span>Financeiro</span></a>
+                            <div id="sidebar" class="sidebar"></div>
+                        </li>
+                    </ul>
+                </div>
+                <footer onclick="http://www.brasystem.com.br/">
+                    <a href="http://www.brasystem.com.br/" 
+                   title="Brasystem: sistemas para automação comercial" target="_blank"></a>
+                </footer>
+            </div>
+            <div class="direito">
+                <div id="fundo">
+                    <div class="caminho">
+                        Você está em:
+                        <a>Início</a>
+                        Vendas
+                    </div>
+                    <div id="janelaVendas"></div>
+                </div>
+                <div id="mapa">
+                    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=pt"></script>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

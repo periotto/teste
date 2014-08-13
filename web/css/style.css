@@ -1,0 +1,935 @@
+/*ao final desta pagina tem um querie para tablets de 10"( 1280 X 800 )*/
+/*--------------------------- GERAL ------------------------------------------*/
+* {
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+body,html {
+    font-size: 1em;
+    height: 100%;
+    width: 100%
+}
+ul {
+    list-style: none;
+}
+a {
+    color: #0574aa;
+    text-decoration: none;
+}
+input[type="date"],#janela,#link-logoff,#main-menu-mobile{
+    display: none;
+}
+h2,h3,h6{
+    text-align: center;
+}
+/*--------------------------- LOGIN ------------------------------------------*/
+.login{
+    background: #d3d3d3;
+}
+.login .submit {
+    margin: 5% 0 0 50%;
+    font-size: 1.2em;
+}
+.login #geral .direito {
+    padding: 2% 1%;
+    background-color: #FFFFFF;
+    width: 61%;
+    height: 210px;
+    right: 1%;
+    top: 3%;
+    -moz-box-shadow: 0 5px 4px #999999;
+    -webkit-box-shadow: 0 5px 4px #999999;
+    box-shadow: 0 5px 4px #999999;
+}
+#login-form{
+    width: 30em;
+    margin: 0;
+}
+.login form{
+    width: 70%;
+}
+.login .form form > p {
+    text-align: center;
+    margin:0 0 15px 6em;
+}
+.login .login-box {
+    float: left;
+    width: 430px;
+    color: #333333;
+    margin-top: 1.25%;
+}
+.login .login-box h2 {
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    font-size: 1.3em;
+}
+.login .login-box ul#login-desktop {
+    display: block;
+    width: 100%;
+    left: -1.5em;
+    position: relative;
+}
+#login-smart,#login-tablet {
+    display: none;
+}
+.login .login-box ul li {
+    font-size: 0.9em;
+    padding: 0.5em 0 0.5em 70px;
+}
+.login .login-box ul li.login-security {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image:url('img/lock.png');
+    background-size: 4em;
+}
+.login .login-box ul li.login-control {
+    background-repeat: no-repeat;
+    background-image:url('img/admin.png');
+    background-position: 0 0px;
+    background-size: 4em;
+}
+.login .login-box ul li.login-anywhere {
+    background-image:url('img/anywhere.png');
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    background-size: 4em;
+}
+.login .login-box p {
+    color: #ffffff;
+    padding: 1.5% 0;
+    background-color: #0574AA;
+    margin: 2.5% 0 0 4%;
+    text-align: center;
+    width: 100%;
+}
+.login input.text{
+    width: 70%;
+    height: 30px;
+    float: right;
+    margin: 5px;
+}
+.login #logo a{
+    background-image: url("img/logo-nome.png");
+    background-position: 0 -5px;
+    background-size: 100% auto;
+    height: 50px;
+    width: 235px;
+}
+/*---------------------- HEADER ----------------------------------------------*/
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.4% 1.3% 0.3% 1.3%;
+    z-index: 50;
+    top: 0px;
+    width: 97.4%;
+    height: 50px;
+    position: absolute;
+    moz-box-shadow: 0px 2px 3px #333;
+    -webkit-box-shadow: 0px 2px 3px #333;
+    box-shadow: 0px 2px 3px #333;
+}
+header h2 {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding-top: 10px;
+}
+header a {
+    color: #fff;
+}
+#logo a{
+    background-image: url('img/logo.png');
+    background-repeat: no-repeat;
+    background-position: -2px -3px;
+    background-size: 3.3em;
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+/*user*/
+#user-name{
+    position: absolute;
+    right: 6.8em;
+    max-height: 40px;
+    top: 1em;
+    padding: 0.2em 0 0.2em 0em;
+}
+#user-name > ul {
+    position: relative;
+    width: 230px;
+    font-size: 0.8em;
+    top:  40px;
+    padding: 2em 1em 1em 1em;
+    text-align: right;
+    z-index: 9;
+    background-color: #000000;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    height: auto;
+    right: -0.5em;
+    display: none;
+}
+#user-name:hover ul {
+    display: block;
+}
+#user-name > ul > li:last-child span {
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    background-position: -10px -19px;
+    display: block;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    width: 100px;
+    float: right;
+}
+#user-name  ul  li  ul{
+    clear: both;
+}
+#user-name > a {
+    max-height: 20px;
+    float: right;
+    text-align: center;
+    width: 175px;
+    padding-right: 30px;
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    background-position: right -37px;
+    padding-right: 20px;
+}
+/*logoff*/
+#logoff {
+    position: absolute;
+    right: 1.3em;
+    top: 1em;
+    border-left: 1px solid #444444;
+    padding: 0.2em 0 0.2em 1.2em;
+}
+#logoff > a {
+    max-width: 175px;
+    padding-right: 30px;
+    float: right;
+    background-image: url('img/icons-user.png');
+    background-position: 30px -57px;
+    background-repeat: no-repeat;
+    padding-right: 25px;
+}
+/*--------------------------- GERAL ------------------------------------------*/
+#geral {
+    top: 9%;
+    width: 100%;
+    height:  91%;
+    position: relative;
+    z-index: 5;
+    *z-index: 5;
+}
+.esquerdo{
+    height: 100%;
+    bottom: 0px;
+    position: absolute;
+    z-index: 20;
+    width: 23%;
+    border-right: 1px solid #c3c3c3;
+    left: 0px;
+    background: -webkit-radial-gradient(circle,#BBE7FF,#76A0BB); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle,#BBE7FF,#76A0BB); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle,#BBE7FF,#76A0BB); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle,#BBE7FF,#76A0BB); /* Standard syntax */
+}
+.direito{
+    position: absolute;
+    display: block;
+    width: 77%;
+    height: 100%;
+    z-index: 0;
+    right: 0px;
+    bottom: 0px; 
+}
+/*--------------------------- FOOTER -----------------------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.login footer a,
+footer a{
+    background-image: url('img/brasystem.png');
+    display: block;
+    width: 175px;
+    height: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/*--------------------------- MENU -------------------------------------------*/
+nav{
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.nav{
+    font: 15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 3.5% 0% 4% 40%;
+    position: relative;
+    -moz-box-shadow: 2px 2px 3px #333;
+    -webkit-box-shadow: 2px 2px 3px #333;
+    box-shadow: -2px 2px 3px #333;
+}
+.nav li a#menu{
+    font-size: 18px;
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    background-position: 3em 2px;
+    padding: 0 35px 0 0px;
+}
+.nav li a{
+    color: #000;
+    font-weight: bold;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    z-index: 50;
+    left: -40px;
+    width: 100%;
+}
+.nav li:hover .submenu{
+    display: block;
+}
+.submenu li a{
+    padding: 10px 0 0 50px;
+    display: block;
+    font-weight: bold;
+    background: #fff;
+    height: 30px;
+} 
+.submenu li#roxo a:link,
+.submenu li#roxo a:visited{    
+    background-image: url('img/vendas.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+    color: #982da8;
+    border-right: 10px solid #982da8;
+    border-left: 10px solid #982da8;
+}
+.submenu li#verde a:link,
+.submenu #verde a:visited{    
+    color: #3f9e09;
+    border-right: 10px solid #3f9e09;
+    border-left: 10px solid #3f9e09;
+    background-image: url('img/produtos.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#rosa a:link,
+.submenu #rosa a:visited{   
+    color: #bf0a80;
+    border-right: 10px solid #bf0a80;
+    border-left: 10px solid #bf0a80;
+    background-image: url('img/franquias.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#azul a:link,
+.submenu #azul a:visited{
+    color: #0574aa;
+    border-right: 10px solid #0574aa;
+    border-left: 10px solid #0574aa;
+    background-image: url('img/lojas.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#laranja a:link,
+.submenu #laranja a:visited{
+    color: #d45d00;
+    border-right: 10px solid #d45d00;
+    border-left: 10px solid #d45d00;
+    background-image: url('img/usuarios.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li a:hover{
+    padding: 10px 0 0 50px;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+}
+.submenu li#roxo a:hover{
+    background-color: #982da8;
+    color: #fff;
+    background-image: url('img/vendas-branco.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#verde a:hover{
+    background-color: #3f9e09;
+    color: #fff;
+    background-image: url('img/produtos-branco.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#azul a:hover{
+    background-color: #0574aa;
+    color: #fff;
+    background-image: url('img/lojas-branco.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#rosa a:hover{
+    background-color: #bf0a80;
+    color: #fff;
+    background-image: url('img/franquias-branco.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+.submenu li#laranja a:hover{
+    color: #fff;
+    background-color: #d45d00;
+    background-image: url('img/usuarios-branco.png');
+    background-repeat: no-repeat;
+    background-position: 0.6em 0px;
+    background-size: 2.5em;
+}
+/*--------------------------- CAMINHO ----------------------------------------*/
+#fundo{
+    height: 45px;
+    width: 100%;
+    z-index: 20;
+    right: 0px;
+    background: #fff;
+    -moz-box-shadow: 2px 2px 3px #333;
+    -webkit-box-shadow: 2px 2px 3px #333;
+    box-shadow: 0px 2px 3px #333;
+}
+.caminho {
+    margin: 1em 0 0 1em;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    font-size: 0.8em;
+    color: #888888;
+}
+.caminho a{
+    background-image: url('img/icons-user.png');
+    background-position: 15px -101px;
+    background-repeat: no-repeat;
+    margin-right: 1px;
+    padding-right: 9px;
+}
+/*----------------------------------------------------------------------------*/
+#opcoes{
+    min-width: 8em;
+}
+/*--------------------------- TABELAS ----------------------------------------*/
+table.pesq {
+    border: 1px solid #acacac;
+    border-collapse: collapse;
+    color: #244B69;
+    width: 98%;
+    margin-top: 1em;
+}
+.table td {
+    border-top: 1px solid #ddd;
+}
+.table tr:nth-child(odd) td {
+    background-color: #f1f6f9;
+}
+.table tr{
+    background-color: #ffffff;
+}
+.table td, table th {
+    text-align: left;
+    padding: 0.4em;
+}
+.table-footer {
+    margin-top: 0.5em;
+    position: relative;
+    text-align: center;
+    width: 98%;
+}
+.table-footer > div {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.table-footer .table-total {
+    color: #555555;
+    font-size: 0.7em;
+    font-style: italic;
+    position: absolute;
+    left: 0;
+}
+.table-footer .table-pagination {
+    color: #555555;
+}
+.table-footer .table-pagination ul li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+.table-footer .table-pagination ul li a {
+    background-image: url('img/icons-user.png');
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 0.5em;
+}
+.table-footer .table-pagination ul li#page-first a {
+    background-position: 6px -124px;
+    height: 15px;
+    width: 20px;
+}
+.table-footer .table-pagination ul li#page-first.disabled a {
+    background-position: 6px -216px;
+}
+.table-footer .table-pagination ul li#page-previous a {
+    background-position: 6px -170px;
+    height: 15px;
+    width: 40px;
+}
+.table-footer .table-pagination ul li#page-previous.disabled a {
+    background-position: 6px -262px;
+}
+.table-footer .table-pagination ul li#page-next a {
+    background-position: 6px -194px;
+    height: 15px;
+    width: 20px;
+    margin-left: 0.5em;
+}
+.table-footer .table-pagination ul li#page-next.disabled a {
+    background-position: 6px -286px;
+}
+.table-footer .table-pagination ul li#page-last a {
+    background-position: 6px -146px;
+    height: 15px;
+    width: 20px;
+}
+.table-footer .table-pagination ul li#page-last.disabled a {
+    background-position: 6px -238px;
+}
+.table-footer .table-page {
+    color: #555555;
+    font-size: 0.9em;
+    position: absolute;
+    right: 0;
+}
+/*--------------------------- FORMS ------------------------------------------*/
+.form {
+    padding: 0.5em 0 0 2%;
+}
+#new-user p,#new-franchising p,#new-store p,#new-product p,form p {
+    font-size: 0.7em;
+    color: #777777;
+    text-align: center;
+}
+form.filtro{
+    margin: 0 0 10px 0;
+    text-align: center;
+    padding: 0 0.5em;
+    height: 220px;
+    border-bottom: 1px solid #c3c3c3;
+}
+form.filtro .submit,.sub-filtro .submit{
+    font-size: 1.2em;
+    margin: 3% 0 0;
+    width: 100%;
+}
+form.filtro h5{
+    margin-bottom: 5px;
+}
+form.filtro h4{
+    padding: 5px 0;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+.form form > h3 {
+    font-size: 1em;
+    color: #333333;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #cccccc;
+    font-weight: normal;
+    text-align: center;
+}
+.form form table,.sub-filtro table {
+    margin-top: 0em;
+}
+form.filtro select {
+    margin: 8px 0 8px 1%;
+}
+.form form input.checkbox,
+.form form input.radio {
+    margin-right: 0.5em;
+}
+.form table td,.sub-filtro table td {
+    border-top: none;
+}
+.form table tr:nth-child(even) td,
+.form table tr:nth-child(odd) td,
+.sub-filtro table tr:nth-child(even) td,
+.sub-filtro table tr:nth-child(odd) td{
+    background-color: #ffffff;
+}
+.sub-filtro table{
+    border: none;
+    margin: 0 0 0 -33%;
+}  
+#esquerdo {
+    width: 48%;
+    margin: 0 0 1% 2%;
+    float: left;
+}
+#direito {
+    width: 50%;
+    float: right;
+}
+.cad #direito{
+    height: 360px;
+}
+/*---------------------- BOTOES, SELECT, INPUTS ------------------------------*/
+.button {
+    background-color: #cccccc;
+    color: #555555;
+    font-size: 1em;
+    padding: 0.3em 0.5em 0.3em;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submit {
+    background-color: #3f9e09;
+    color: #FFFFFF;
+}
+select{
+    width: 15em;
+    height: 28px;
+    padding: 0.2em 0.2em 0.2em 1em;
+    border: 1px solid #bbbbbb;
+}
+input.text {
+    width: 13.87em;
+    padding: 0.2em 0.5em;
+    border: 1px solid #bbbbbb;
+    height: 20px;
+}
+.new{
+    color: #ffffff;
+    background: #0574AA;
+    width: 89%;
+    font-size: 1.3em;
+}
+/*----------------------------------------------------------------------------*/
+/*ESTILOS PARA PAGINAS ESPECIFICAS*/
+/*VENDAS*/
+.vendas #direito,
+.vendas #esquerdo{
+    text-align: center;
+}
+.detail-store {
+    width: 17em;
+    color: #333333;
+    background-color: #ffffff;
+    padding: 0.5em 0 0 0.5em;
+}
+.detail-store h3, .detail-store h4 {
+    font-size: 1.2em;
+}
+.detail-store h4 {
+    font-weight: normal;
+    text-align: center;
+}
+.detail-store h3 {
+    color: #0574AA;
+    text-align: center;
+}
+.detail-store p {
+    font-size: 1em;
+}
+.detail-store p.total-store {
+    margin-top: 0.5em;
+    border-bottom: 1px solid #ccc; 
+}
+.detail-store > a {
+    background-color: #0574AA;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    padding: 0.1em 0;
+    margin: 0.8em 0 0 -0.5em
+}
+.link_class {
+    cursor: pointer; /*IE*/
+    cursor: hand; /*FF e demais*/
+}
+#mapa{
+    position: absolute;
+    width: 100%;
+    height: 91.7%;
+    bottom: 0px;
+    z-index: 0;
+    right: 0px;
+}
+.vendas .sub-filtro table{
+    text-align: center;
+}
+.vendas table.pesq{
+    margin-top: 0;
+}
+.vendas input.text{
+    width: 9.7em;
+    margin-bottom: 10px;
+}
+.vendas select{
+    width: 10.8em;
+}
+.vendas nav{
+    margin: 0;
+}
+.vendas .sub-filtro .submit{
+    width: 90%;
+    margin: 3% 5%;
+}
+#grafico{
+    overflow: hidden;
+    margin: 0 0 0 -7em;
+}
+#mens{
+    height: 30px;
+    border-radius: 2px;
+    width: 240px;
+    top: 14em;
+    right: 23em;
+    float: right;
+    position: relative;
+    text-align: center;
+    padding-top: 4em;
+    background: url('img/logo-nome.png');
+    background-size: 13em;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+.vendas #footer{
+    height: 40px;
+    margin: 0 0 0;
+}
+/*SIDEBAR*/
+.sidebar{
+    padding: 10px;
+}
+.sidebar > a {
+    position: relative;
+}
+.sidebar > ul li#total {
+    background: 0 3px;
+    padding: 0px;
+    font-size: 15px;
+}
+.sidebar > a img {
+    border: 0;
+}
+.sidebar > a  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #0574AA;
+    color: #FFFFFF;
+    padding: 0.2em 0;
+    text-align: center;
+    width: 135px;
+}
+.sidebar > ul {
+    margin-bottom: 1em;
+}
+.sidebar > ul li {
+    color: #555555;
+    margin-bottom: 0.7em;
+    font-size: 0.9em;
+    padding-left: 40px;
+    background-image: url('img/icons-pay.png');
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #dddddd;
+}
+/*TIPOS PGTO*/
+#tipoPGTO{
+    max-width: 18%;
+    height: 98%;
+    margin: 0 0 0 -40px;
+    padding: 10px 0 0 5px;
+    float: left;
+    position: fixed;
+    z-index: 20;
+}
+#tipoPGTO ul li{
+    background-image: url('img/icons-pay.png');
+    background-repeat: no-repeat;
+    padding: 1px 0 0 40px;
+}
+#tipoPGTO ul li#total {
+    background: none;
+    padding: 0px;
+}
+/*SAIDEBAR E FINANCEIRO*/
+ul li #valor{
+    background: 0 3px;
+    padding: 0px;
+    font-size: 15px;
+}
+ul li#pay-cash {
+    background-position: 0 5px;
+}
+ul li#pay-billet {
+    background-position: 0 -34px;
+}
+ul li#pay-check {
+    background-position: 0 -75px;
+}
+ul li#pay-card {
+    background-position: 0 -115px;
+}
+ul li#pay-datecheck {
+    background-position: 0 -157px;
+}
+ul li#pay-change {
+    background-position: 0 -200px;
+}
+ul li#pay-checkconsult {
+    background-position: 0 -245px;
+}
+ul li#pay-order {
+    background-position: 0 -290px;
+}
+ul li#pay-gift {
+    background-position: 0 -334px;
+}
+ul li#pay-employee {
+    background-position: 0 -376px;
+}
+ul li#pay-ted {
+    background-position: 0 -422px;
+}
+ul li#pay-changegift {
+    background-position: 0 -290px;
+}
+#janelaVendas{
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 1%;
+    width: 80%;
+    z-index: 20;
+}
+#tVendas{
+    width: 78%;
+    float: right;
+    z-index: 50;
+    position: relative;
+}
+#tVendas table,#tItens table, sub-filtro table{
+    margin-top: 0em;
+}
+#produto table thead,
+#financeiro table thead,
+#loja1 table thead,
+#tItens table thead,
+#tVendas table thead{
+    color: #244B69;
+    margin: 0 auto;
+    font-weight: bold;
+    width: auto;
+}
+/*----------------------------------------------------------------------------*/
+.index2 .submenu{
+    display: block;
+}
+/*----------------------------------------------------------------------------*/
+/*PRODUTOS*/
+#comboFranquia select{
+    float: left;
+    margin: 0 20px 0 0;
+}
+.cad{
+    margin-top: 2%;
+}
+.cad .filtro{
+    margin: 0 0 20px 0;
+}
+.produtos .filtro table{
+    text-align: left;
+    width: 90%;
+}
+.produtos .new {
+    margin: 0 6% 60%;
+    width: 88%;
+}
+/*INDEX*/
+.index #geral{
+    top: 20%;
+    width: 60%;
+    height: 60%;
+}
+#nav > ul > li{ /* will style only the top level li */
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+    display: inline-block;
+    margin: 1px;
+    border-radius: 3px;
+    position:relative;
+    background: url('img/icons-menu.png');
+    background-size: 700px;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#fff;
+}
+#nav li.rosa{
+    background-color:#bf0a80;
+    background-position: -270px 20px;
+}
+#nav li.azul{		
+    background-position: -405px 25px;
+    background-color: #0574aa;
+    background-size: 685px;
+}
+#nav li.laranja{	
+    background-position: -557px 20px;
+    background-color:#d45d00;
+}
+#nav li.roxo{	
+    background-position: 20px 20px;
+    background-color:#982da8;
+}
+#nav li.verde{
+    background-position: -127px 20px;
+    background-color:#3f9e09;
+}
+
+#nav > ul > li > a{
+    color:inherit;
+    text-decoration:none !important;
+    font-size:24px;
+    padding: 0 27px 123px 28px;
+}
+.centro{
+    margin: 0 0 0 5%;
+}
+/*USUARIOS*/
+/*LOJAS*/
+/*FRANQUIAS*/
+.stores .new{
+    margin: 0 6% 145% 6%;
+}
+
+
+@media screen and(orientation:landscape){
+
+}
+@media screen and(orientation:portaite){
+
+}

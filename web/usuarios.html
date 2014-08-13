@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <meta name="author" content="Brasystem" />    
+        <link href="images/favicon.ico" rel="shortcut icon">
+
+        <link rel="stylesheet" href="css/style.css" media="screen and (min-width:1025px)" />  
+        <link rel="stylesheet" href="css/style-tablet.css" media="screen and (min-width:600px) 
+              and (max-width:1024px)">
+        <link rel="stylesheet" href="css/style-smart.css" media="screen and (max-width:599px)">  
+        <!--[if lt IE 9]>
+                <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        <title>Usuários | Weblojas</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/usuario.js"></script>
+    </head>
+    <body class="stores">
+        <header>
+            <a href="#" id="grid" class="menu-anchor">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <div id="logo">
+                <a></a>                
+            </div>
+            <h2>Usu&aacute;rios</h2>
+            <div id="user">
+                <div id="user-name">
+                    <a href="#">Ol&aacute;, <span id="name"></span></a>
+                    <ul>
+                        <li><i>Último login: <span id="ultimo_login"></span></i></li>
+                        <li>
+                            <span>Permissões</span>
+                            <ul id="permissoes">
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="logoff">
+                    <a href="../controle/request.php?PAGINA=sair" title="Sair">Sair</a>
+                </div> 
+            </div>      
+        </header>
+        <section id="geral">
+            <div class="esquerdo">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#" id="menu">Menu</a>
+                            <ul class="submenu">
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>  
+                <input type="button" onclick="cad();" class="button new" value="Cadastrar usuário"/>
+                <footer>
+                    <p><a href="http://www.brasystem.com.br/brasystem/index.php" 
+                          title="Brasystem: sistemas para automação comercial" target="_blank"></a></p>
+                </footer>
+            </div>
+            <div class="direito">
+                <div id="fundo">
+                    <div class="caminho">
+                        Você está em:
+                        <a>Início</a>
+                        Usuários
+                    </div>
+                </div>
+                <table class="table pesq">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Login</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody id="DATAGRID">
+                    </tbody>                    
+                </table>
+                <div class="table-footer">
+                    <div class="table-total">
+                        <span>Exibindo <span id="itens"></span> de <span id="total"></span> usuário(s)</span>
+                    </div>                           	
+                    <div class="table-pagination">
+                        <ul>
+                            <li id="page-first" class="disabled"><a></a></li>
+                            <li id="page-previous" class="disabled"><a></a></li>
+                            
+                            <li id="pag"></li>
+                            
+                            <li id="page-next" class="disabled"><a></a></li>
+                            <li id="page-last" class="disabled"><a></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cad">
+                </div>
+            </div>  	
+        </section>
+    </body>
+</html>

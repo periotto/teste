@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+        <div id="new-product" class="form-container">
+            <h3>Cadastro de Produtos</h3>
+            <p>Todos os campos devem ser preenchidos</p>
+            <form class="form" action="javascript:salvaProduto();" method="post">
+                <span id="teste">Selecione a Loja e a Franquia</span>
+                <div class="filtro">
+                    <div id="comboFranquia">
+                    </div>
+                    <select  id='lojas' class='required'>
+                        <option value="0">Todas as lojas</option>
+                    </select>    
+                </div>
+
+                <table id="esquerdo">
+                    <tr>
+                        <td>ID:</td>
+                        <td><input type="text" disabled name="id" id="id" class="text required"/></td>
+                    </tr> 
+                    <tr>                   
+                        <td>Código de barras:</td>
+                        <td><input type="text" id="codigoBarra"  name="codigoBarra" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Descrição:</td>
+                        <td><input type="text" id="desc" name="desc" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Unidade:</td>
+                        <td>
+                            <select id="unidade" name="unidade" class="required">	        
+                                <option value="1">banco</option>
+                            </select>
+                        </td>
+                    </tr> 
+                    <tr>
+
+                        <td>Preço de venda (R$):</td>
+                        <td><input type="text" id="preco" name="preco" class="text required" /></td>
+                    </tr> 
+                    <tr>
+
+                        <td>Total em estoque:</td>
+                        <td><input type="text" id="estoque" name="estoque" class="text required" /></td>
+                    </tr> 
+                    <tr>
+
+                        <td>ISSQN:</td>
+                        <td><input type="text" id="issqn" name="issqn" class="text required" /></td>
+                    </tr> 
+                    <tr>
+
+                        <td>ICMS:</td>
+                        <td><input type="text" id="icms" name="icms" class="text required" /></td>                    
+                    </tr> 
+                    <tr>
+
+                        <td>Origem da mercadoria:</td>
+                        <td>
+                            <select id="origem" name="origem" class="required">	        
+                                <option value="0">Nacional</option>
+                                <option value="1">Estrangeira-Importação direta</option>
+                                <option value="2">Estrangeira-Importação no mercado interno</option>
+                            </select>
+                        </td>
+                    </tr> 
+                    <tr>
+
+                        <td>Código tributário:</td>
+                        <td>
+                            <select id="codigo" name="codigo" class="required">	        
+                                <option value="00">Tributada integralmente
+                                <option value="10">Tributada e com cobrança do ICMS por substituição 
+                                    tributária</option>
+                                <option value="20">Com redução de base de cálculo</option>
+                                <option value="30">Isenta ou não tributada e com cobrança do ICMS por substituição
+                                    tributária</option>
+                                <option value="40">Isenta</option>
+                                <option value="41">Não Tributada</option>
+                                <option value="50">Suspensão</option>
+                                <option value="51">Diferimento</option>
+                                <option value="60">ICMS cobrado anteriormente por substituição tributária</option>
+                                <option value="70">Com redução de base de cálculo e cobrança do ICMS por substituição
+                                    tributária</option>
+                                <option value="90">Outras</option>
+
+                            </select>
+                        </td>
+                    </tr> 
+                    <tr>
+
+                        <td>Tipo item:</td>
+                        <td>
+                            <select id="tipoItem" name="tipoItem" class="required">	        
+                                <option value="00">Mercadoria para Revenda</option>
+                                <option value="01">Matéria-Prima</option>
+                                <option value="02">Embalagem</option>
+                                <option value="03">Produto em Processo</option>
+                                <option value="04">Produto Acabado</option>
+                                <option value="05">Subproduto</option>
+                                <option value="06">Produto Intermediário</option>
+                                <option value="07">Material de Uso e Consumo</option>
+                                <option value="08">Ativo Imobilizado</option>
+                                <option value="09">Serviços</option>
+                                <option value="10">Outros insumos</option>
+                                <option value="99">Outras</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="direito">
+                    <tr>
+                        <td>Grupo:</td>
+                        <td>
+                            <select id="grupo" name="grupo" class="required">         
+                                <option value="1">banco</option>
+                            </select>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>Código de exportação:</td>
+                        <td><input type="text" id="exportacao" name="exportacao" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Código de exportação (IPI):</td>
+                        <td><input type="text" id="ipi" name="ipi" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Código de gênero:</td>
+                        <td><input type="text" id="genero" name="genero" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Código nomenclatura Mercosul:</td>
+                        <td><input type="text" id="mercosul" name="mercosul" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td> Lista de serviços:</td>
+                        <td><input type="text" id="servicos" name="servicos"  class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td> Conta analítica contábil:</td>
+                        <td><input type="text" id="contaAnalitica" name="contaAnalitica" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Receita:</td>
+                        <td><input type="text" id="receita" name="receita" class="text required" /></td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2"><input type="checkbox" id="pesavel" name="pesavel" class="checkbox" />
+                                <span>Este produto é <b>pesável</b></span></td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" id="prodPropria" name="prodPropria" class="checkbox" />
+                                <span>Este produto é de <b>produção própria</b></span></td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2"><input type="checkbox" id="promocao" name="promocao" class="checkbox" />
+                                <span>Este produto encontra-se em <b>promoção</b></span></td>
+                    </tr> 
+                </table>
+                <div class="botoes produto">
+                    <input type="submit" class="button submit" value="Salvar" />
+                    <input type="button" onclick="javascript:window.location.reload();"
+                           class="button" value="Cancelar" />
+                </div>
+            </form>
+        </div>
+
+        <div id="new-store" class="form-container">
+            <h3>Cadastro de Lojas</h3>
+            <p>Todos os campos devem ser preenchidos</p>
+            <form class="form" action="javascript:salvaLoja();" method="post">
+                <table>
+                    <tr>
+                        <td>ID:</td>
+                        <td><input type="text" disabled name="id" id="id" class="text required"/></td>
+                    </tr>
+                    <tr>
+                        <td>Descrição:</td>
+                        <td><input type="text" name="loja" id="loja" class="text required" /></td>
+                    </tr>
+                    <tr>
+                        <td>Franquia:</td>
+                        <td>
+                            <select id="franquia" class="required">         
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Servidor:</td>
+                        <td><input type="text" name="servidor" id="servidor" class="text required" /></td>
+                    </tr>
+                    <tr>
+                        <td>Porta:</td>
+                        <td><input type="text" name="porta" id="porta" class="text required" /></td>
+                    </tr>
+                    <tr>
+                        <td>User:</td>
+                        <td><input type="text" name="user" id="user" class="text required" /></td>
+                    </tr>
+                    <tr>
+                        <td>Senha:</td>
+                        <td><input type="password" name="senha" id="senha" class="text required" /></td>                    
+                    </tr>
+                    <tr>
+                        <td>Base de dados:</td>
+                        <td><input type="text" name="base" id="base" class="text required" /></td>                   
+                    </tr>
+                </table>
+                <div class="botoes loja">
+                    <button class="button submit">Salvar</button>
+                    <input type="button" onclick="javascript:window.location.reload();"
+                           class="button" value="cancelar" />
+                </div>
+            </form>
+        </div>
+
+        <div id="new-franchising" class="form-container">
+            <h3>Cadastro de Franquia</h3>
+            <p>Todos os campos devem ser preenchidos</p>
+            <form class="form" action="javascript:salvaFranq();"  method="post">
+                <table>
+                    <tr>
+                        <td>ID:</td>
+                        <td><input type="text" disabled name="id" id="id" class="text required"/></td>
+                    </tr>
+                    <tr>
+                        <td>Nome da franquia:</td>
+                        <td><input type="text" name="nome" id="nome" class="text required"/></td>                 
+                    </tr>
+                </table>
+                <div class="botoes franquia">
+                    <button class="button submit">Salvar</button>
+                    <input type="button" onclick="javascript:window.location.reload();"
+                           class="button" value="cancelar" />
+                </div>
+            </form>
+        </div>
+
+        <div id="new-user" class="form-container">
+            <h3>Cadastro de Usuário</h3>
+            <p>Todos os campos devem ser preenchidos</p>
+            <form class="form" action="javascript:salvaUser();" method="post">
+                <table>
+                    <tr>
+                        <td>ID:</td>
+                        <td><input type="text" disabled name="id" id="id" class="text required"/></td>
+                    </tr>
+                    <tr>
+                        <td>Nome:</td>
+                        <td><input type="text" name="nome" id="nome" class="text required" /></td>  
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="email" id="email" class="text required" /></td>
+                    </tr>
+                    <tr>
+                        <td>Usuário:</td>
+                        <td><input type="text" name="userName" id="user" class="text required" /></td>    
+                    </tr>
+                    <tr>
+                        <td>Senha:</td>
+                        <td><input type="password" name="senha" id="senha" class="text required" /></td>    
+                    </tr>
+                    <tr>
+                        <td>Confirme a senha:</td>
+                        <td><input type="password" name="confSenha" id="senha2" class="text required" /></td> 
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input value="1" type="checkbox" name="cadUsers" id="cadUsers" class="checkbox" />
+                            <span>cadastro de <b>usuários</b></span></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input value="1" type="checkbox" name="cadLojas" id="cadLojas" class="checkbox" />
+                            <span>cadastro de <b>lojas</b></span></td>
+                    </tr>
+                    <tr>
+                        <td>Permissões para este usuário:</td>
+                        <td><input value="1" type="checkbox" name="cadFranquias" id="cadFranquias" class="checkbox"/>
+                            <span>cadastro de <b>franquias</b></span></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input value="1" type="checkbox" name="cadProdutos" id="cadProdutos" class="checkbox" />
+                            <span>cadastro de <b>produtos</b></span></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input value="1" type="checkbox" name="verVendas" id="verVendas" class="checkbox" />
+                            <span>visualização de <b>vendas</b></span></td>
+                    </tr>
+                </table>
+                <div class="botoes user">
+                    <button class="button submit">Salvar</button>
+                    <input type="button" onclick="javascript:window.location.reload();"
+                           class="button" value="cancelar" />
+                </div>
+            </form>
+        </div>        
+    </body>
+</html>
